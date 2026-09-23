@@ -4,6 +4,25 @@ export const cv = {
   role: 'Backend Developer',
   location: 'Estado de México, México',
   github: 'https://github.com/jpabloan',
+  ui: {
+    skipToContent: 'Saltar al contenido',
+    navigationLabel: 'Secciones del currículum',
+    sections: {
+      profile: 'Perfil',
+      experience: 'Experiencia',
+      skills: 'Habilidades',
+      education: 'Formación',
+      languages: 'Idiomas',
+    },
+    headings: {
+      profile: 'Perfil profesional',
+      experience: 'Experiencia',
+      skills: 'Habilidades técnicas',
+      education: 'Formación',
+      languages: 'Idiomas',
+    },
+    technologies: 'Tecnologías utilizadas en Enviatodo',
+  },
   profile: [
     'Desarrollador Backend con 5 años de experiencia profesional, especializado en PHP, CodeIgniter, MySQL e integración de APIs REST. Experiencia desarrollando integraciones con servicios externos, lógica de negocio y herramientas administrativas, además de soporte técnico a operaciones y diagnóstico de incidencias mediante logs de producción.',
     'Actualmente enfocado en ampliar conocimientos de arquitectura de software y desarrollo asistido por IA.',
