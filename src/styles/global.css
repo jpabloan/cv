@@ -1,0 +1,84 @@
+:root {
+  color-scheme: light;
+  --paper: #f8f9f7;
+  --ink: #202925;
+  --muted: #526159;
+  --accent: #355f55;
+  --rule: #cbd3cd;
+  --font: 'Segoe UI', 'Source Sans 3', 'Optima', 'Candara', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 100%;
+  line-height: 1.65;
+  scrollbar-color: var(--muted) var(--paper);
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+::selection { background: #d2e3da; color: var(--ink); }
+a { color: var(--accent); text-underline-offset: .25em; text-decoration-thickness: 1px; }
+a:hover { color: var(--ink); text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+h1, h2, h3, h4, p, dl, dd { margin: 0; }
+h1, h2, h3, h4 { line-height: 1.2; text-wrap: balance; }
+h1 { font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 600; letter-spacing: -.035em; }
+h2 { font-size: 1.125rem; font-weight: 600; margin-bottom: 1.5rem; }
+h3 { font-size: 1.75rem; letter-spacing: -.025em; font-weight: 600; }
+h4, dt { font-size: 1rem; font-weight: 600; }
+p { max-width: 72ch; }
+.document { max-width: 1220px; margin-inline: auto; padding: 5rem 3rem 6rem; display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 5rem; }
+.identity { align-self: start; }
+.role { margin-top: 1.25rem; font-size: 1.125rem; color: var(--accent); font-weight: 600; }
+.location { margin-top: .5rem; font-size: .9375rem; color: var(--muted); max-width: 25ch; }
+.github { display: inline-block; margin-top: 2rem; padding-block: .5rem; font-weight: 600; }
+.handle { display: block; font-size: .875rem; font-weight: 400; color: var(--muted); }
+nav { border-top: 1px solid var(--rule); margin-top: 2rem; padding-top: 1.25rem; display: grid; justify-items: start; }
+nav a { padding-block: .5rem; min-height: 44px; font-size: .9375rem; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { min-width: 0; }
+section { scroll-margin-top: 2rem; }
+section + section { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+.intro { font-size: 1.1875rem; line-height: 1.65; }
+.current-focus { margin-top: 1.25rem; color: var(--muted); }
+.job-header { display: flex; gap: 1rem; justify-content: space-between; align-items: baseline; }
+.job-role { margin-top: .5rem; color: var(--accent); }
+.dates { white-space: nowrap; color: var(--muted); font-size: .9375rem; font-variant-numeric: tabular-nums; }
+.contributions { list-style: none; margin: 2rem 0 0; padding: 0; }
+.contributions li + li { margin-top: 1.75rem; }
+.contributions p { margin-top: .5rem; }
+.technologies { margin-top: 2rem; }
+.technologies p { margin-top: .5rem; color: var(--muted); font-size: .9375rem; }
+.skills { display: grid; gap: 1.25rem; }
+.skills div { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 1rem; }
+.languages { display: flex; gap: 4rem; }
+.languages dd { color: var(--muted); }
+.skip-link { position: absolute; top: .5rem; left: 1rem; padding: .75rem 1rem; background: var(--paper); transform: translateY(-200%); }
+.skip-link:focus { transform: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (max-width: 1000px) {
+  .document { grid-template-columns: 235px minmax(0, 1fr); gap: 3rem; padding-inline: 2rem; }
+  .job-header { flex-direction: column; gap: .75rem; }
+  .skills div { grid-template-columns: 1fr; gap: .25rem; }
+}
+@media (max-width: 720px) {
+  .document { display: block; padding: 2.5rem 1.5rem 4rem; }
+  h1 { font-size: 2.5rem; }
+  .location { max-width: none; }
+  .github { margin-top: 1rem; }
+  nav { display: flex; flex-wrap: wrap; column-gap: 1.5rem; padding-block: .75rem; margin-top: 1.5rem; border-bottom: 1px solid var(--rule); }
+  main { margin-top: 2.5rem; }
+  .intro { font-size: 1.125rem; }
+  section + section { margin-top: 2.5rem; }
+}
+@media print {
+  :root { background: white; color: black; font-size: 10pt; }
+  .document { max-width: none; display: block; padding: 0; }
+  nav, .skip-link { display: none; }
+  .identity { margin-bottom: 2rem; }
+  h1 { font-size: 24pt; }
+  h1 br { display: none; }
+  .github { margin-top: .5rem; }
+  section + section { margin-top: 1.5rem; padding-top: 1rem; }
+  .contributions li, .skills div, .languages { break-inside: avoid; }
+  h2, h3, h4 { break-after: avoid; }
+}

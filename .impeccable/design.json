@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-23T05:39:21.510Z",
+  "title": "Design System: Technical memo CV",
+  "extensions": {
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1000px"
+      },
+      {
+        "name": "single-column",
+        "value": "720px"
+      }
+    ],
+    "shadows": [],
+    "motion": []
+  },
+  "components": [
+    {
+      "name": "Section link",
+      "kind": "nav",
+      "refersTo": "section-link",
+      "description": "Native anchor navigation with visible keyboard focus.",
+      "html": "<a href=\"#experiencia\">Experiencia</a>",
+      "css": "a { display:inline-block; min-height:44px; padding:.5rem 0; color:#355f55; text-decoration:none; font:15px/1.65 sans-serif; } a:hover {color:#202925;text-decoration:underline;text-underline-offset:.25em} a:focus-visible{outline:2px solid #355f55;outline-offset:5px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Technical memo",
+    "overview": "A narrow identity margin and a generous reading column make verified experience easy to assess.",
+    "keyCharacteristics": [
+      "Uninterrupted evidence",
+      "Fine section rules",
+      "Still content"
+    ],
+    "rules": [],
+    "dos": [
+      "Preserve semantic reading order",
+      "Use verified content"
+    ],
+    "donts": [
+      "Add contact placeholders",
+      "Invent professional claims"
+    ]
+  }
+}

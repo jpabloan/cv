@@ -1,46 +1,35 @@
-# Astro Starter Kit: Basics
+# Juan Pablo Arceo Noriega — CV
+
+A static Spanish CV built with Astro. The Technical memo layout presents verified backend experience, skills, formation and languages. GitHub is the only public professional link.
+
+## Development
+
+Requires Node >=22.12.0 and the existing project dependencies.
 
 ```sh
-npm create astro@latest -- --template basics
+npm run dev -- --background
+npm run astro -- dev status
+npm run astro -- dev logs
+npm run astro -- dev stop
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Open `http://localhost:4321/cv/`.
 
-## 🚀 Project Structure
+## Build
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+```sh
+npm run build
+npm run preview
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+The static output is in `dist/`. `astro.config.mjs` retains the GitHub Pages site URL and `/cv` base path.
 
-## 🧞 Commands
+## Content and design
 
-All commands are run from the root of the project, from a terminal:
+- `src/data/cv.ts`: verified Spanish CV content, separate from presentation for future translations.
+- `src/pages/index.astro`: semantic CV structure.
+- `src/styles/global.css`: responsive and print styles.
+- `PRODUCT.md`: product scope and privacy constraints.
+- `DESIGN.md`: implemented design system.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+No client-side JavaScript or external runtime services are required. Do not add personal email addresses, phone numbers, contact placeholders, or unverified claims to public content.

@@ -22,3 +22,11 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Impeccable local/session state
+.impeccable/config.local.json
+.impeccable/questions/
+.impeccable/shape-options.json
+
+# Local agent tooling
+.agents/
