@@ -2,7 +2,7 @@
 export const cv = {
   name: 'Juan Pablo Arceo Noriega',
   role: 'Backend Developer',
-  location: 'Monterrey, Nuevo León, México',
+  location: 'Estado de México, México',
   github: 'https://github.com/jpabloan',
   profile: [
     'Desarrollador Backend con 5 años de experiencia profesional, especializado en PHP, CodeIgniter, MySQL e integración de APIs REST. Experiencia desarrollando integraciones con servicios externos, lógica de negocio y herramientas administrativas, además de soporte técnico a operaciones y diagnóstico de incidencias mediante logs de producción.',
