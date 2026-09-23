@@ -1,16 +1,22 @@
 ---
-import '../styles/global.css';
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+import "../styles/global.css";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
+
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Juan Pablo Arceo Noriega. Desarrollador Backend con 5 años de experiencia profesional en PHP, CodeIgniter, MySQL e integración de APIs REST. Monterrey, México." />
-    <meta name="theme-color" content="#f8f9f7" />
-    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
-    <title>Juan Pablo Arceo Noriega — Backend Developer</title>
-  </head>
-  <body><slot /></body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Juan Pablo Arceo Noriega. Desarrollador Backend con 5 años de experiencia profesional en PHP, CodeIgniter, MySQL e integración de APIs REST. Estado de México, México."
+        />
+        <meta name="theme-color" content="#f8f9f7" />
+        <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+        <title>Juan Pablo Arceo Noriega — Backend Developer</title>
+    </head>
+    <body>
+        <slot />
+    </body>
 </html>
