@@ -13,6 +13,33 @@
   line-height: 1.65;
   scrollbar-color: var(--muted) var(--paper);
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #171b19;
+    --ink: #e4e9e6;
+    --muted: #a6b1ab;
+    --accent: #9abdaf;
+    --rule: #3b4640;
+
+    color-scheme: dark;
+  }
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --paper: #f8f9f7;
+  --ink: #202925;
+  --muted: #526159;
+  --accent: #355f55;
+  --rule: #cbd3cd;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #171b19;
+  --ink: #e4e9e6;
+  --muted: #a6b1ab;
+  --accent: #9abdaf;
+  --rule: #3b4640;
+}
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
@@ -77,6 +104,22 @@ section + section { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid v
     margin-top: 2rem;
     padding-top: 1rem;
     text-align: right;
+}
+.theme-toggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: .5rem;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--ink);
 }
 @media (max-width: 1000px) {
   .document { grid-template-columns: 235px minmax(0, 1fr); gap: 3rem; padding-inline: 2rem; }

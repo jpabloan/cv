@@ -24,6 +24,7 @@ export const cv = {
     technologies: 'Technologies used at Enviatodo',
     languageSwitcherLabel: 'Language',
     backToTop: 'Back to top',
+    themeToggleLabel: 'Change theme',
   },
   profile: [
     'Backend Developer with 5 years of professional experience, specializing in PHP, CodeIgniter, MySQL, and REST API integration. Experienced in developing integrations with external services, business logic, and administrative tools, as well as providing technical support for operations and diagnosing incidents through production logs.',

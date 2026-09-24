@@ -7,6 +7,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     {cv.ui.skipToContent}
 </a>
 <div class="document">
+    <button
+        class="theme-toggle"
+        type="button"
+        aria-label={cv.ui.themeToggleLabel}
+    >
+        ◐
+    </button>
     <header class="identity">
         <h1>
             Juan Pablo <br />
@@ -128,3 +135,27 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         </a>
     </footer>
 </div>
+
+<script>
+    const themeToggle = document.querySelector(".theme-toggle");
+    const root = document.documentElement;
+
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "light" || savedTheme === "dark") {
+        root.dataset.theme = savedTheme;
+    }
+
+    themeToggle?.addEventListener("click", () => {
+        const currentTheme =
+            root.dataset.theme ??
+            (window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light");
+
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+        root.dataset.theme = newTheme;
+        localStorage.setItem("theme", newTheme);
+    });
+</script>
