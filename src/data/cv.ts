@@ -22,6 +22,8 @@ export const cv = {
       languages: 'Idiomas',
     },
     technologies: 'Tecnologías utilizadas en Enviatodo',
+    backToTop: 'Volver arriba',
+    languageSwitcherLabel: 'Idioma',
   },
   profile: [
     'Desarrollador Backend con 5 años de experiencia profesional, especializado en PHP, CodeIgniter, MySQL e integración de APIs REST. Experiencia desarrollando integraciones con servicios externos, lógica de negocio y herramientas administrativas, además de soporte técnico a operaciones y diagnóstico de incidencias mediante logs de producción.',
@@ -48,4 +50,5 @@ export const cv = {
   ],
   education: 'Autodidacta en desarrollo de software, con formación continua mediante documentación técnica, práctica profesional y proyectos propios.',
   languages: [['Español', 'Nativo'], ['Inglés', 'Profesional']],
+  developedBy: 'Desarrollado por: jpabloan',
 };

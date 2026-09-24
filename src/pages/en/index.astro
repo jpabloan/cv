@@ -1,0 +1,13 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CV from "../../components/CV.astro";
+import { cv } from "../../data/cv.en";
+---
+
+<Layout
+    lang="en"
+    title="Juan Pablo Arceo Noriega — Backend Developer"
+    description="Juan Pablo Arceo Noriega. Backend Developer with 5 years of professional experience in PHP, CodeIgniter, MySQL, and REST API integration. Mexico, Mexico."
+>
+    <CV cv={cv} lang="en" />
+</Layout>

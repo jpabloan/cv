@@ -1,5 +1,6 @@
 ---
-const { cv } = Astro.props;
+const { cv, lang } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <a class="skip-link" href="#contenido">
@@ -30,6 +31,21 @@ const { cv } = Astro.props;
             </svg>
             <span class="handle">github.com/jpabloan</span>
         </a>
+        <div class="language-switcher" aria-label={cv.ui.languageSwitcherLabel}>
+            <a
+                href={`${base}/`}
+                aria-current={lang === "es" ? "page" : undefined}
+            >
+                ES
+            </a>
+            <span aria-hidden="true">/</span>
+            <a
+                href={`${base}/en/`}
+                aria-current={lang === "en" ? "page" : undefined}
+            >
+                EN
+            </a>
+        </div>
         <nav aria-label={cv.ui.navigationLabel}>
             <a href="#perfil">{cv.ui.sections.profile}</a>
             <a href="#experiencia">{cv.ui.sections.experience}</a>
@@ -104,4 +120,11 @@ const { cv } = Astro.props;
             </dl>
         </section>
     </main>
+    <footer id="document-footer" class="document-footer">
+        <p class="footer-credits">{cv.developedBy} © 2026</p>
+        <hr />
+        <a class="back-to-top" href="#contenido">
+            ↑ {cv.ui.backToTop}
+        </a>
+    </footer>
 </div>
