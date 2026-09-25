@@ -38,6 +38,20 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
             </svg>
             <span class="handle">github.com/jpabloan</span>
         </a>
+        <br />
+
+        <a
+            class="download-cv"
+            href={
+                lang === "es"
+                    ? "/pdf/juan-pablo-arceo-noriega-cv-es.pdf"
+                    : "/pdf/juan-pablo-arceo-noriega-cv-en.pdf"
+            }
+            download
+        >
+            {lang === "es" ? "Descargar CV" : "Download CV"}
+        </a>
+        <br />
         <div class="language-switcher" aria-label={cv.ui.languageSwitcherLabel}>
             <a
                 href={`${base}/`}
@@ -53,6 +67,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
                 EN
             </a>
         </div>
+
         <nav aria-label={cv.ui.navigationLabel}>
             <a href="#perfil">{cv.ui.sections.profile}</a>
             <a href="#experiencia">{cv.ui.sections.experience}</a>
