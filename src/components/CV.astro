@@ -150,27 +150,36 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         </a>
     </footer>
 </div>
-
 <script>
-    const themeToggle = document.querySelector(".theme-toggle");
-    const root = document.documentElement;
+    function initThemeToggle() {
+        const themeToggle = document.querySelector(".theme-toggle");
+        const root = document.documentElement;
 
-    const savedTheme = localStorage.getItem("theme");
+        const savedTheme = localStorage.getItem("theme");
 
-    if (savedTheme === "light" || savedTheme === "dark") {
-        root.dataset.theme = savedTheme;
+        if (savedTheme === "light" || savedTheme === "dark") {
+            root.dataset.theme = savedTheme;
+        }
+
+        themeToggle?.addEventListener("click", () => {
+            const currentTheme =
+                root.dataset.theme ??
+                (window.matchMedia("(prefers-color-scheme: dark)").matches
+                    ? "dark"
+                    : "light");
+
+            const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+            root.dataset.theme = newTheme;
+            localStorage.setItem("theme", newTheme);
+        });
     }
 
-    themeToggle?.addEventListener("click", () => {
-        const currentTheme =
-            root.dataset.theme ??
-            (window.matchMedia("(prefers-color-scheme: dark)").matches
-                ? "dark"
-                : "light");
+    document.addEventListener("astro:page-load", initThemeToggle);
 
-        const newTheme = currentTheme === "dark" ? "light" : "dark";
+    if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+    }
 
-        root.dataset.theme = newTheme;
-        localStorage.setItem("theme", newTheme);
-    });
+    window.scrollTo(0, 0);
 </script>
