@@ -47,7 +47,7 @@ export const cv = {
   skills: [
     ['Backend', 'PHP · CodeIgniter 3 · REST APIs · Integraciones con servicios externos'],
     ['Datos', 'MySQL · SQL'],
-    ['Desarrollo y operaciones', 'Git · Linux · SSH · Postman · análisis de logs · CI/CD'],
+    ['Desarrollo y operaciones', 'Git · Linux · SSH · Postman · análisis de logs'],
   ],
   education: 'Autodidacta en desarrollo de software, con formación continua mediante documentación técnica, práctica profesional y proyectos propios.',
   languages: [['Español', 'Nativo'], ['Inglés', 'Profesional']],
